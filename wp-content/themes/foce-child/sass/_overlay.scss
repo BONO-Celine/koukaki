@@ -1,0 +1,256 @@
+
+// Reset 
+* {
+  box-sizing:border-box; 
+  outline:none;
+  margin:0;
+  padding:0;
+}
+
+//***********************************************************************************
+/* Overlay */
+//***********************************************************************************
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  max-width: 1440px;
+  background: #FFF5E9;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  }
+
+/* **** Ouverture de l'overlay ****** */
+.open {
+  opacity: 1;
+  visibility: visible;
+  height: calc(100% - 80px);
+  animation: fade-in-move-down 2s 300ms both;
+}
+// ***********************************
+
+.overlay__menu {
+  position: relative;
+  font-size: 64px;
+  font-weight: 400;
+  text-align: center;
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width:481px) and (max-width:768px),  (min-width:769px) and (max-height:720px) {
+    font-size: 3rem;
+  }
+  //liste de liens du menu
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+
+    li {
+      display: block;
+      height: 25%;
+      min-height: 50px;
+      position: relative;
+
+      a {
+        display: block;
+        position: relative;
+        color: #000000;
+        text-decoration: none;
+        overflow: hidden;
+        // Ombre colorée sur les liens du menu au survol de la souris
+        &:hover {
+          filter: drop-shadow(#FF5C00 0 0 14px); // couleur decalage-x decalage-y rayon-flou (blur)
+        }
+      }
+    }
+  }
+}
+
+// *****************************************************************
+//logo
+// *****************************************************************
+.overlay__logo {
+  margin-top: 5%;
+}
+
+// *****************************************************************
+//footer
+// *****************************************************************
+.overlay__footer {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 3%;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// ***********************************************************
+/*  ******************CHATS et FLEURS*********************  */
+// ***********************************************************
+
+// *****************************************************************
+/* chats */
+// *****************************************************************
+
+.overlay__menu-story-link::before {
+  content: url("./assets/images/Kawaneko.png");
+  position: absolute;
+  left: -3em;
+  animation: floating 7s 100ms infinite ease-in-out;
+  transform: rotate(45deg);
+
+  @media (max-width: 480px) {
+    left: -1em;
+    top: -6em;
+  }
+}
+
+.overlay__menu-place-link::before {
+  content: url("./assets/images/Jaakuna.png");
+  position: absolute; 
+  right: -3em;
+  animation: floating 5s 300ms infinite ease-in-out; 
+
+  @media (max-width: 480px) {
+    right: -5em;
+    top: -2em;
+  }
+}
+
+.overlay__footer::before {
+  content: url("./assets/images/Onejiiro.png");
+  position: absolute;
+  left: 3em;
+  bottom: 5em; 
+  animation: floating 6s 200ms infinite ease-in-out; 
+
+  @media (max-width: 480px) {
+    left: 1em;
+    bottom: 3em;
+  }
+}
+
+// *****************************************************************
+/* fleurs */
+// *****************************************************************
+
+.overlay::after{
+  //content: url("./assets/images/orchid.png");
+  content: url();
+  background-image: url("./assets/images/orchid.png");
+  position: absolute;
+  left: -4.5em;
+  top: 3em;
+
+  @media (max-width: 480px) {
+    background-size: 90px 90px;
+    width: 90px;
+    height: 90px;
+    left: -2.3em;
+    top: 7em;
+  }
+}
+
+.overlay__menu-story-link::after {
+  //content: url("./assets/images/Sunflower.png");
+  content: url();
+  background-image: url("./assets/images/Sunflower.png");
+  position: absolute;
+  right: -4em;
+  bottom: 0em;
+
+  @media (max-width: 480px) {
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    right: -3em;
+    bottom: 4em;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    right: -1em;
+    bottom: 2.5em;
+  }
+}
+
+.overlay__menu-characters-link::after {
+  //content: url("./assets/images/random_flower.png");
+  content: url();
+  background:url("./assets/images/random_flower.png");
+  background-size: 76px 76px;
+  position: absolute;
+  right: -7.8em;
+  top: -1em;
+
+  @media (max-width: 480px) {
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    right: -3.5em;
+    top: 1em;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    right: -2em;
+    top: 1em;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    background-size: 65px 65px;
+    width: 65px;
+    height: 65px;
+    right: -2.3em;
+    top: 1em;
+  }
+}
+
+.overlay__menu-place-link::after {
+  content: url("./assets/images/flower.png");
+  position: absolute;
+  left: -4em;
+  top: -0.5em;
+}
+
+.overlay__footer::after {
+  //content: url("./assets/images/hibiscus_footer.png");
+  content: url();
+  background-image: url("./assets/images/hibiscus_footer.png");
+  background-size: 626px 626px;
+  width: 626px;
+  height: 626px;
+  position: absolute;
+  right: -26em;
+  bottom: -23em;
+
+  @media (max-width: 480px) {
+    background-size: 150px 150px;
+    width: 150px;
+    height: 150px;
+    right: -6em;
+    bottom: -2.5em;
+  }
+
+  @media (min-width:481px) and (max-width:1023px) {
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    right: -12.5em;
+    bottom: -8.5em;
+  }
+}

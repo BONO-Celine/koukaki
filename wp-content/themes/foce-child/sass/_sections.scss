@@ -1,0 +1,36 @@
+// ******************************************************************************
+/* supprime la marge à droite dans version mobile dû au dépassement des fleurs */
+// ******************************************************************************
+.story {
+  overflow: hidden;
+}
+
+// ******************************************************************************
+/* animation des sections */
+// ******************************************************************************
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+// ******************************************************************************
+
+.story #characters {
+  display: block;
+  @media (min-width: 768px)
+  {
+    text-align: left;
+  }
+}
+
+.story__article {
+  @media (max-width: 768px) { 
+    padding-bottom: 0;
+  }
+
+  p {
+    @media (max-width: 768px) {
+    margin-bottom: 0;
+    }
+  }
+}

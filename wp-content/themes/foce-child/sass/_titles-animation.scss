@@ -1,0 +1,65 @@
+.titles-animation {
+animation: fadeInTitles 1.5s ease-in, moveUpTitles 1.5s ease-in; 
+}
+
+h2, h3 {
+box-sizing: border-box;
+overflow: hidden;
+transition-duration: 0.8s;
+background-size: 100% 100%;
+text-align: center;
+
+  span {
+    display: block;
+  }
+  }
+
+.story #characters h3 {
+  background-position: left;
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @media (max-width: 768px) {
+    padding: 15%;
+    line-height: 1;
+  }
+}
+
+.story #place h3 {
+  padding-left: 70px;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) and (max-width:1024px) {
+  margin-top: 55px;
+  }
+  @media (max-width: 480px) {
+    padding: 1em;
+    margin: 4em 0.5em 0 -0.2em;
+    span {
+      width: max-content;
+    }
+  }
+}
+
+.story__article h2 {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+#studio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    padding-right: 5%;
+    padding-left: 5%;
+
+    @media (max-width: 768px) {
+      padding-right: 10%;
+      padding-left: 10%;
+      line-height: 1;
+    }
+  }
+}

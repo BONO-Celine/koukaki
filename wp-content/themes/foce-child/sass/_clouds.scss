@@ -1,0 +1,77 @@
+
+/* Remplacement de l'image de background par celle sans nuage pour les ecrans de + de 768px */
+.story #place {
+  position: relative;
+  justify-content: space-between;
+
+  @media (min-width:768px) {
+    background-image: url("./assets/images/Studio_Koukaki-image_place.png");
+  }  
+}
+
+.place__clouds { 
+  width: 38.5%;
+  height: 238px;
+  right : 0;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  margin-top: 4%;
+  margin-right: 6.5%;
+  position: absolute;
+  //transition: transform 2s; 
+  @media (max-width:767px)  {
+    display: none !important; 
+  }
+  /* Application d'un flou sur les nuages */
+  img {
+    filter: blur(15px);
+  }
+   /* Positionement des nuages */ 
+  .place__clouds-big-cloud {
+    height: 122px;
+    right: 0;
+    position: absolute;
+    @media (min-width:768px) and (max-width:1023px)  {
+      margin-top: 50px;
+    }  
+    @media (min-width:1024px) and (max-width:1440px)  {
+      margin-top: 20px;
+    }  
+  }
+
+  .place__clouds-little-cloud {
+    height: 55px;
+    top: 250px;
+    right: 500px;
+    align-self: end;
+  }
+}
+
+/* Animation vers la gauche des nuages */
+/*.move-clouds {
+  @media (min-width:1024px) {
+    left: 100%;
+    transform: translateX(-300px);
+  }
+
+  @media (min-width:768px) and (max-width:1023px)  {
+    transform: translateX(-150px);
+  }  
+ }*/
+
+.story #place > div {
+  @media (max-width: 920px) {
+        margin: 5%;
+  }
+  @media (max-width: 720px) {
+    width: auto;
+    padding-left: 2em;
+    padding-top: 6em;
+  }
+}
+
+.story #place > div p {
+  @media (max-width: 720px) {
+    padding-left: 2em;
+  }
+}

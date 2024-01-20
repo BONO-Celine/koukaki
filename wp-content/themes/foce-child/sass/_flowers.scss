@@ -1,0 +1,176 @@
+// ************************************************************************************ //
+/* Rendre les conteneurs des fleurs carrées pour qu'elles ne se dévient pas en tournant */
+// ************************************************************************************ //
+
+/* Sunflower.png */
+.story h2::after {
+    width: 154px;
+	height: 154px;
+}
+
+/* Hibiscus.png */
+.story__article::after {
+    width: 188px;
+    height: 188px;
+}
+
+/* random_flower.png */
+#studio h2::before {
+    width: 203px;
+    height: 203px; 
+}
+  
+/* flower.png */
+#studio h2::after {
+    width: 109px;
+    height: 109px;
+}
+  
+/* Sunflower.png */
+//.site-footer::before {
+#nomination::before {
+    width: 216px;
+	height: 216px;
+}
+
+/* orchid.png */
+//.site-footer::after {
+#nomination::after {
+    width: 173px;
+    height: 173px;
+}
+  
+/* Hibiscus_footer.png */
+.site-footer ul::after {
+    content: url();
+    background-image: url("../foce/assets/images/hibiscus_footer.png");
+    background-size: 626px 626px;
+    width: 626px;
+    height: 626px;
+}
+
+/* *********************************** */
+// fleurs de l'overlay
+/* *********************************** */
+
+/* orchid.png */
+.overlay::after {
+    width: 173px;
+    height: 173px;
+}
+
+/* Sunflower.png */
+.overlay__menu-story-link::after {
+    width: 216px;
+	height: 216px;
+}
+
+/* random_flower.png */
+.overlay__menu-characters-link::after {
+    width: 76px;
+    height: 76px;
+}
+
+/* flower.png */
+.overlay__menu-place-link::after {
+    width: 71px;
+    height: 71px;
+}
+
+/* Hibiscus_footer.png */
+.overlay__footer::after {
+    width: 626px;
+    height: 626px;
+}
+
+//*********************************************
+/*    ROTATION DES FLEURS */
+//*********************************************
+
+/* propriété personnalisée pour la vitesse de rotation des fleurs (équivalent variable css) */
+:root {
+    --flowers-rotation-speed: 20s;
+}
+
+/* Animation pour la rotation des fleurs */
+.story h2::after,
+.story__article::after,
+#studio h2::before,
+#studio h2::after,
+//.site-footer::before,
+//.site-footer::after,
+#nomination::after,
+#nomination::before,
+.site-footer ul::after,
+/* fleurs de l'overlay */
+.overlay::after,
+.overlay__menu-story-link::after,
+.overlay__menu-characters-link::after,
+.overlay__menu-place-link::after,
+.overlay__footer::after {
+    animation: flowers-rotation var(--flowers-rotation-speed) linear infinite;
+}
+
+// *********************************************************************************************************
+/* cacher morceau de fleur qui dépasse */
+#studio {
+    overflow: hidden;
+}
+
+
+/* Suppression des fleurs du footer 
+pour les déplacer section "nomination" */
+
+.site-footer::before {
+    content: none; 
+}
+  
+.site-footer::after {
+    content: none;
+}
+  
+/* ************************************************************ */
+// Positionement et tailles des fleurs de la section nomination
+/* ************************************************************ */
+
+/* sunflower_footer.png */
+#nomination::before {
+//content: url("./assets/images/sunflower_footer.png");
+    content: url();
+    background-image: url("./assets/images/sunflower_footer.png");
+    position: absolute;
+    left: 4em;
+    top: 0;
+  
+    @media (max-width: 480px) {
+      background-size: 100px 100px;
+      width: 100px;
+      height: 100px;
+      left: 1em;
+      top: 4em;
+    }
+    
+    @media (min-width:481px) and (max-width:1024px) {
+      left: 0.5em;
+    }
+}
+
+/* orchid.png */  
+#nomination::after {
+    //content: url("./assets/images/orchid.png");
+    content: url();
+    background-image: url("./assets/images/orchid.png");
+    position: absolute;
+    right: -4.9em;
+    top: -0.3em;
+  
+    @media (max-width: 480px) {
+      background-size: 90px 90px;
+      width: 90px;
+      height: 90px;
+      right: -3em;
+      top: 2em;
+    }
+}
+  
+  

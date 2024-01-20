@@ -1,0 +1,121 @@
+/* Animation de mouvement vers le haut avec augmentation de l'opacité */
+
+@include keyframes (fade-in-move-up) {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  } 
+  100% {
+    transform: translateY(0);  
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Animation de mouvement vers le bas avec augmentation de l'opacité */
+
+@include keyframes (fade-in-move-down) {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }  
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+/* Animation de mouvement vers le haut */
+@include keyframes (moveUp) {
+  0% {
+    transform: translateY(50px);
+  } 
+  100% {
+    transform: translateY(0);  
+  }
+}
+
+/* Animation effet de fondu */
+@include keyframes (fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//***********************************************************************
+/* En 3 étapes car permet de retarder le debut de l'animation des titres 
+qui ne se fait qu'à 66% pour terminer animation des sections avant */
+//***********************************************************************
+
+/* Animation effet de fondu pour les titres */
+@include keyframes (fadeInTitles) {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation de mouvement vers le haut pour les titres */
+@include keyframes (moveUpTitles) {
+  0% {
+    transform: translateY(50px);
+  } 
+  66% {
+    transform: translateY(50px);
+  } 
+  100% {
+    transform: translateY(0);  
+  }
+}
+
+
+// *************************************** //  
+/* ******* Flottement des images ********* */
+// *************************************** //  
+
+@include keyframes (floating) {
+  0% {
+    transform: translate(0px,0px);
+  }
+  15% {
+    transform: translate(-15px,0px);
+  }
+  30% {
+    transform: translate(0px,-15px);
+  }
+  45% {
+    transform: translate(15px,0px);
+  }
+  60% {
+    transform: translate(0px,-15px);
+  }
+  75% {
+    transform: translate(-15px,15px);
+  }
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+// *************************************** //  
+// ******* Rotation des fleurs ********* //
+// *************************************** //  
+
+@include keyframes (flowers-rotation) {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+} 

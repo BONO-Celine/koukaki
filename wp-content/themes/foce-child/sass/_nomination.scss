@@ -1,0 +1,61 @@
+#nomination {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 150px;
+  justify-content: center;
+}
+
+.nomination__title {
+
+  @media (max-width: 720px) {
+    min-width: 280px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 55%;
+    margin-left: -5%;
+  }
+
+  h3 {
+    overflow: hidden;
+    background-image: url("./assets/images/orange_nomination_bg.png");
+    line-height: 1.4;
+    text-shadow: 0px 4px 4px #00000040; // x y flou (blur) couleur
+    padding: 8%;
+    text-align: left;
+  
+    @media (max-width: 480px) {
+      padding: 15%;
+    }
+  
+    @media (min-width:481px) and (max-width:720px) {
+      padding: 10%;
+    }
+  
+    @media (max-width: 720px) {
+      text-align: center;
+      font-size: 1.7rem;
+    }
+  
+    @media (min-width:721px) and (max-width:1024px) {
+      text-align: center;
+      padding: 5%;
+    }
+   
+      @media (min-width:721px) and (max-width:1200px) {
+        margin-top: 5%;
+      }
+    }
+}
+
+.nomination__logo img {
+  padding-top: 65px;
+  margin-left: -30px;
+
+  @media (max-width: 1023px) {
+  margin-left: 0;
+  }
+}
